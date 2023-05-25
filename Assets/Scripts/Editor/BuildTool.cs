@@ -53,7 +53,7 @@ public class BuildTool : Editor
 
             // 构造文件信息字符串
             List<string> dependencyInfo = GetPrefabDependencies(assetName);
-            string bundleInfo = assetName + "|" + bundleName;
+            string bundleInfo = assetName + "|" + bundleName + ".ab";
 
             if (dependencyInfo.Count > 0)
             {

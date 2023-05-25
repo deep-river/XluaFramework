@@ -81,6 +81,7 @@
     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
     <Compile Include="Assets\LoadTest.cs" />
     <Compile Include="Assets\Scripts\Framework\AppConst.cs" />
+    <Compile Include="Assets\Scripts\Framework\ResourceManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
