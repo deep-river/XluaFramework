@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5F31AB51-B52F-970D-8453-D28E2344083C}</ProjectGuid>
+    <ProjectGuid>{54860623-BD9B-344C-CA09-3F0E94DB1AE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Xlua.Core.Editor</AssemblyName>
@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
-    <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
-    <Compile Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />
+    <Compile Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
+    <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
+    <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLua\Src\Editor\Template\LuaInterfaceBridge.tpl.txt" />
@@ -759,7 +759,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Xlua.Core.csproj">
-      <Project>{DC4703F2-3851-F143-36F9-FB169DCD6071}</Project>
+      <Project>{FFF0F8A6-5369-13FF-F8FA-F53235FDC281}</Project>
       <Name>Xlua.Core</Name>
     </ProjectReference>
   </ItemGroup>
