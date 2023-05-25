@@ -46,7 +46,7 @@ public class ResourceManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 异步加载资源
+    /// 异步加载bundle中资源
     /// </summary>
     /// <param name="assetName">资源文件名</param>
     /// <param name="action">完成回调</param>
@@ -77,9 +77,37 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
+    /// <summary>
+    /// 编辑器模式下直接从目录下加载资源，而不从bundle中加载
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    void EditorLoadAsset(string assetName, Action<UObject> action = null)
+    {
+        UObject obj = UnityEditor.AssetDatabase.LoadAssetAtPath(assetName, typeof(UObject));
+        if (obj == null)
+            Debug.LogError("asset does not exist:" + assetName);
+
+        action?.Invoke(obj);
+    }
+#endif
+
+
+    /// <summary>
+    /// 根据GameMode加载资源
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    // GameMode在场景的Root节点下修改
     private void LoadAsset(string assetName, Action<UObject> action)
     {
-        StartCoroutine(LoadBundleAsync(assetName, action));
+#if UNITY_EDITOR
+        if (AppConst.GameMode == GameMode.EditorMode)
+            EditorLoadAsset(assetName, action);
+        else
+#endif
+            StartCoroutine(LoadBundleAsync(assetName, action));
     }
 
     /// <summary>
