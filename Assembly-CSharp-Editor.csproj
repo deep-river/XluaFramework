@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4D70DFCC-41CC-72BC-9E61-67988A818AA6}</ProjectGuid>
+    <ProjectGuid>{925006BC-B0B2-EF35-342E-D3C922A61B53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\XLua\Examples\08_Hotfix\Editor\HotfixTestCfg.cs" />
-    <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
-    <Compile Include="Assets\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
     <Compile Include="Assets\Scripts\Editor\BuildTool.cs" />
+    <Compile Include="Assets\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
+    <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -806,15 +806,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{746EC2DB-8992-7169-945C-42242A8C2E6F}</Project>
+      <Project>{460BD42C-236B-746B-59CF-022910FA5E0A}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Xlua.Core.csproj">
-      <Project>{DC4703F2-3851-F143-36F9-FB169DCD6071}</Project>
+      <Project>{FFF0F8A6-5369-13FF-F8FA-F53235FDC281}</Project>
       <Name>Xlua.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Xlua.Core.Editor.csproj">
-      <Project>{5F31AB51-B52F-970D-8453-D28E2344083C}</Project>
+      <Project>{54860623-BD9B-344C-CA09-3F0E94DB1AE8}</Project>
       <Name>Xlua.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>
