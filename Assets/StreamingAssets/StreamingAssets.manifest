@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 2709175925
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/resources/character_back_glow.png.ab
+      Dependencies: {}
+    Info_1:
+      Name: ui/resources/character_back_glow_small.png.ab
+      Dependencies: {}
+    Info_2:
+      Name: ui/resources/character_bottom_bg_small.png.ab
+      Dependencies: {}
+    Info_3:
+      Name: ui/resources/character_sample_00_l.png.ab
+      Dependencies: {}
+    Info_4:
+      Name: ui/resources/character_sample_00_m.png.ab
+      Dependencies: {}
+    Info_5:
+      Name: ui/resources/character_sample_00_s.png.ab
+      Dependencies: {}
+    Info_6:
+      Name: ui/resources/character_sample_01.png.ab
+      Dependencies: {}
+    Info_7:
+      Name: ui/resources/character_sample_02.png.ab
+      Dependencies: {}
+    Info_8:
+      Name: ui/resources/character_sample_03.png.ab
+      Dependencies: {}
+    Info_9:
+      Name: ui/resources/character_sample_04.png.ab
+      Dependencies: {}
+    Info_10:
+      Name: ui/resources/character_sample_05.png.ab
+      Dependencies: {}
+    Info_11:
+      Name: ui/resources/character_sample_06.png.ab
+      Dependencies: {}
+    Info_12:
+      Name: ui/resources/character_sample_07.png.ab
+      Dependencies: {}
+    Info_13:
+      Name: ui/resources/character_sample_08.png.ab
+      Dependencies: {}
+    Info_14:
+      Name: ui/resources/character_sample_09.png.ab
+      Dependencies: {}
