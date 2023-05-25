@@ -77,9 +77,39 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    public void LoadAsset(string assetName, Action<UObject> action)
+    private void LoadAsset(string assetName, Action<UObject> action)
     {
         StartCoroutine(LoadBundleAsync(assetName, action));
+    }
+
+    /// <summary>
+    /// 对外暴露的资源调用API
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    public void LoadUI(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetUIPath(assetName), action);
+    }
+
+    public void LoadMusic(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetMusicPath(assetName), action);
+    }
+
+    public void LoadSound(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetSoundPath(assetName), action);
+    }
+
+    public void LoadEffect(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetEffectPath(assetName), action);
+    }
+
+    public void LoadScene(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetScenePath(assetName), action);
     }
 
 
@@ -90,8 +120,8 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         ParseVersionFile();
-        string assetName = "Assets/BuildResources/UI/Prefab/UITest.prefab";
-        this.LoadAsset(assetName, OnComplete);
+        LoadUI("UITest", OnComplete);
+        LoadUI("Login/Popup_Login", OnComplete);
     }
 
     private void OnComplete(UObject obj)

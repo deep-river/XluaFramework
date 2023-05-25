@@ -85,7 +85,7 @@ public class BuildTool : Editor
     {
         List<string> dependencies = new List<string>();
         string[] files = AssetDatabase.GetDependencies(curFile);
-        dependencies = files.Where(file => !file.EndsWith(".cs") && !file.Equals(curFile)).ToList();
+        dependencies = files.Where(file => !file.EndsWith(".cs") && !file.Equals(curFile) && !file.StartsWith("Packages")).ToList();
         return dependencies;
     }
 }
