@@ -13,10 +13,25 @@ public class PathUtil : MonoBehaviour
     // bundle输出目录
     public static readonly string BundleOutPath = Application.streamingAssetsPath;
 
+    // 只读目录
+    public static readonly string ReadOnlyPath = Application.streamingAssetsPath;
+
+    // 可读写目录
+    public static readonly string ReadWritePath = Application.persistentDataPath;
+
     // bundle资源路径
+    // streamingAssetsPath为只读文件夹，用于打包前存放资源
+    // persistentDataPath为可读写文件夹，用于安装后释放资源
     public static string BundleResourcePath
     {
-        get { return Application.streamingAssetsPath; }
+        get 
+        { 
+            if (AppConst.GameMode == GameMode.UpdateMode)
+            {
+                return Application.persistentDataPath;
+            }
+            return Application.streamingAssetsPath; 
+        }
     }
 
     /// <summary>
