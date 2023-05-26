@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -139,6 +140,7 @@ public class HotUpdate : MonoBehaviour
     /// <param name="fileInfo"></param>
     private void OnReleaseFileComplete(DownloadFileInfo fileInfo)
     {
+        Debug.LogFormat("File release complete:[{0}]", fileInfo.url);
         // 文件写入路径
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
@@ -205,6 +207,7 @@ public class HotUpdate : MonoBehaviour
     /// <param name="fileInfo"></param>
     private void OnUpdateFileComplete(DownloadFileInfo fileInfo)
     {
+        Debug.LogFormat("File update complete:[{0}]", fileInfo.url);
         // 文件写入路径
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
@@ -222,6 +225,16 @@ public class HotUpdate : MonoBehaviour
 
     private void EnterGame()
     {
+        Manager.Resource.ParseVersionFile();
+        Manager.Resource.LoadUI("UITest", OnComplete);
+        Manager.Resource.LoadUI("Login/Popup_Login", OnComplete);
+    }
 
+    private void OnComplete(UnityEngine.Object obj)
+    {
+        GameObject go = Instantiate(obj) as GameObject;
+        go.transform.SetParent(this.transform);
+        go.SetActive(true);
+        go.transform.localPosition = Vector3.zero;
     }
 }

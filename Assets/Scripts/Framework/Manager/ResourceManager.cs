@@ -21,7 +21,7 @@ public class ResourceManager : MonoBehaviour
     /// <summary>
     /// 解析版本文件
     /// </summary>
-    private void ParseVersionFile()
+    public void ParseVersionFile()
     {
         // 版本文件路径
         string url = Path.Combine(PathUtil.BundleResourcePath, AppConst.FileListName);
@@ -141,7 +141,7 @@ public class ResourceManager : MonoBehaviour
     }
 
 
-
+    /*
     /// <summary>
     /// Test AssetLoad
     /// </summary>
@@ -159,4 +159,5 @@ public class ResourceManager : MonoBehaviour
         go.SetActive(true);
         go.transform.localPosition = Vector3.zero;
     }
+    */
 }

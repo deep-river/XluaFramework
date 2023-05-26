@@ -11,5 +11,6 @@ public class GameStart : MonoBehaviour
     void Awake()
     {
         AppConst.GameMode = GameMode;
+        DontDestroyOnLoad(this);
     }
 }

@@ -28,9 +28,9 @@ public class PathUtil : MonoBehaviour
         { 
             if (AppConst.GameMode == GameMode.UpdateMode)
             {
-                return Application.persistentDataPath;
+                return ReadWritePath;
             }
-            return Application.streamingAssetsPath; 
+            return ReadOnlyPath; 
         }
     }
 
