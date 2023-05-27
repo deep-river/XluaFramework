@@ -19,6 +19,9 @@ public class PathUtil : MonoBehaviour
     // 可读写目录
     public static readonly string ReadWritePath = Application.persistentDataPath;
 
+    // Lua脚本路径
+    public static readonly string LuaPath = "Assets/BuildResources/LuaScript";
+
     // bundle资源路径
     // streamingAssetsPath为只读文件夹，用于打包前存放资源
     // persistentDataPath为可读写文件夹，用于安装后释放资源

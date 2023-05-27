@@ -1,0 +1,5 @@
+function Main()
+    print("hello lua main");
+end
+
+--Main();

@@ -64,9 +64,11 @@
     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
+    <Compile Include="Assets\Scripts\Framework\Manager\Manager.cs" />
     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\ResourceManager.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
+    <Compile Include="Assets\Scripts\Framework\Util\FileUtil.cs" />
     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
     <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
     <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
@@ -80,12 +82,11 @@
     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
     <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
     <Compile Include="Assets\Scripts\Framework\Util\PathUtil.cs" />
+    <Compile Include="Assets\Scripts\Framework\Manager\LuaManager.cs" />
     <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
     <Compile Include="Assets\Scripts\Framework\HotUpdate.cs" />
-    <Compile Include="Assets\Scripts\Framework\Util\FileUtil.cs" />
-    <Compile Include="Assets\Scripts\Framework\Manager\Manager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />

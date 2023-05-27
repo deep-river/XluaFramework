@@ -42,6 +42,11 @@ public class ResourceManager : MonoBehaviour
             }
 
             m_BundlesInfo.Add(bundleInfo.AssetsName, bundleInfo);
+
+            if (info[0].IndexOf("LuaScript") > 0)
+            {
+                Manager.Lua.LuaNames.Add(info[0]);
+            }
         }
     }
 
@@ -70,6 +75,7 @@ public class ResourceManager : MonoBehaviour
 
         AssetBundleRequest bundleRequest = request.assetBundle.LoadAssetAsync(assetName);
         yield return bundleRequest;
+        Debug.Log("LoadBundleAsync!");
 
         if (action != null && bundleRequest != null)
         {
@@ -96,6 +102,7 @@ public class ResourceManager : MonoBehaviour
 
     /// <summary>
     /// 根据GameMode加载资源
+    /// 非编辑模式下为异步加载bundle中资源
     /// </summary>
     /// <param name="assetName"></param>
     /// <param name="action"></param>
@@ -138,6 +145,11 @@ public class ResourceManager : MonoBehaviour
     public void LoadScene(string assetName, Action<UObject> action = null)
     {
         LoadAsset(PathUtil.GetScenePath(assetName), action);
+    }
+
+    public void LoadLua(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(assetName, action);
     }
 
 
