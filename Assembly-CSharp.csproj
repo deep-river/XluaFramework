@@ -60,12 +60,14 @@
     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
     <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
     <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
+    <Compile Include="Assets\Scripts\Framework\Manager\UIManager.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
     <Compile Include="Assets\Scripts\Framework\Behaviour\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\Manager.cs" />
+    <Compile Include="Assets\Scripts\Framework\Behaviour\UILogic.cs" />
     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
     <Compile Include="Assets\Scripts\Framework\Manager\ResourceManager.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
@@ -88,8 +90,6 @@
     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
     <Compile Include="Assets\Scripts\Framework\HotUpdate.cs" />
-    <Compile Include="Assets\Scripts\Framework\Behaviour\UILogic.cs" />
-    <Compile Include="Assets\Scripts\Framework\Manager\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />

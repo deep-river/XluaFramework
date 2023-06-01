@@ -1,8 +1,17 @@
 Manager = CS.Manager;
 
+local group = 
+{
+    "Main",
+    "UI",
+    "Box",
+}
+
+Manager.UI:SetUIGroup(group);
+
 function Main()
     print("hello lua main");
-    Manager.UI:OpenUI("UITest", "ui.TestUI");
+    Manager.UI:OpenUI("UITest", "UI", "ui.TestUI");
 end
 
 --Main();
